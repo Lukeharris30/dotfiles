@@ -27,19 +27,13 @@ git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout 2>&1 \
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
 ```
 
-### 3. Pull the neovim config
-
-```sh
-git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME submodule update --init
-```
-
-### 4. Hide untracked files
+### 3. Hide untracked files
 
 ```sh
 git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config status.showUntrackedFiles no
 ```
 
-### 5. Add the dotfiles alias to fish
+### 4. Add the dotfiles alias to fish
 
 Add this to `~/.config/fish/config.fish` inside the `if status is-interactive` block if it isn't already there (it will be after step 2):
 
@@ -81,4 +75,4 @@ dotfiles diff
 | `.config/fish/config.fish` | Fish shell config — PATH, aliases, zellij auto-launch |
 | `.config/zellij/config.kdl` | Zellij keybinds and settings |
 | `.config/ghostty/config.ghostty` | Ghostty terminal config |
-| `.config/nvim/` | Neovim config (submodule → [Lukeharris30/nvim](https://github.com/Lukeharris30/nvim)) |
+| `.config/nvim/` | Neovim config |
